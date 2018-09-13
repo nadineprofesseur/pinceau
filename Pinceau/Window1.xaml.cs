@@ -27,6 +27,7 @@ namespace Pinceau
 		public Window1()
 		{
 			InitializeComponent();
+			
 		}
 		
 		void actionDessinerTriangle_Click(object sender, RoutedEventArgs e)
@@ -77,5 +78,11 @@ namespace Pinceau
 			//this.dessin.setTop(rond, 100);
 			//this.dessin.setLeft(rond, 100);
 		}
+		void actionNettoyer_Click(object sender, RoutedEventArgs e)
+		{
+			this.dessin.Children.Clear();
+		}
+		//public afficherEspace(Terrain terrain)
+		//public afficherCarte(List<Parcelle> listeParcelle)
 	}
 }

@@ -11,5 +11,7 @@ namespace Pinceau
 	/// </summary>
 	public partial class App : Application
 	{
+		//List<Parcelle> listeParcelles = Parseur.parserParcelles(xml);
+		//fenetre.afficheListeParcelles(listeParcelles);
 	}
 }
