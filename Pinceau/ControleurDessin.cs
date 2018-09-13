@@ -16,6 +16,8 @@ namespace Pinceau
 	public class ControleurDessin
 	{
 		private VuePlancheDessin vuePlancheDessin = null;
+		enum FORME{CERCLE,CARRE,TRIANGLE};
+		private FORME formeActive;
 		
 		public ControleurDessin(VuePlancheDessin vue)
 		{
@@ -27,22 +29,20 @@ namespace Pinceau
 		}
 		public void notifierActionDessinerCercle()
 		{
-			this.vuePlancheDessin.afficherCercle(50,50);
-			this.vuePlancheDessin.afficherCercle(100,100);
-			this.vuePlancheDessin.afficherCercle(150,150);
-			this.vuePlancheDessin.afficherCercle(200,200);
+			this.formeActive = FORME.CERCLE;
+			//this.vuePlancheDessin.illuminerActionCercle();
 		}
 		public void notifierActionDessinerCarre()
 		{
-			this.vuePlancheDessin.afficherCarre(0,0);
-			this.vuePlancheDessin.afficherCarre(100,100);
-			this.vuePlancheDessin.afficherCarre(150,150);
-			this.vuePlancheDessin.afficherCarre(200,200);
+			this.formeActive = FORME.CARRE;
 		}
 		public void notifierActionDessinerTriangle()
 		{
-			this.vuePlancheDessin.afficherTriangle(0,0);
+			this.formeActive = FORME.TRIANGLE;
 		}
-		
+		public void notifierActionClicDessin(int x, int y)
+		{
+			this.vuePlancheDessin.nettoyerDessin();
+		}
 	}
 }

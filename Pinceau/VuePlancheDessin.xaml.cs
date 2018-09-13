@@ -51,12 +51,12 @@ namespace Pinceau
 		}
 		void actionNettoyer_Click(object sender, RoutedEventArgs e)
 		{
-			this.nettoyerDessin();
+			this.controleur.notifierActionNettoyerDessin();
 		}
 		// https://stackoverflow.com/questions/4157717/how-can-i-listen-for-left-mouseclicks-on-a-canvas-in-a-c-sharp-wpf
 		void dessin_MouseLeftButtonDown(object sender, RoutedEventArgs e)
 		{
-			this.nettoyerDessin();	
+			this.controleur.notifierActionClicDessin(0,0);
 		}
 		// Fin gestionnaires d'événements
 		
