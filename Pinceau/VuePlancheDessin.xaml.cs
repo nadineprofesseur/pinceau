@@ -32,10 +32,55 @@ namespace Pinceau
 			this.controleur = new ControleurDessin(this);
 		}
 		
+		// Gestionnaires d'événements de la librairie graphique
 		void actionDessinerTriangle_Click(object sender, RoutedEventArgs e)
 		{
+			afficherTriangle(0,0);
+		}
+		void actionDessinerCarre_Click(object sender, RoutedEventArgs e)
+		{
+			afficherCarre(0,0);
+		}
+		void actionDessinerCercle_Click(object sender, RoutedEventArgs e)
+		{
+			this.controleur.notifierActionDessinerCercle();
+		}
+		void actionNettoyer_Click(object sender, RoutedEventArgs e)
+		{
+			this.nettoyerDessin();
+		}
+		// Fin gestionnaires d'événements
+		
+		public void afficherCercle(int x, int y)
+		{
+			Ellipse rond = new Ellipse();
+			SolidColorBrush brosse = new SolidColorBrush();
+			brosse.Color = Color.FromRgb(239,174,23);
+			rond.Fill = brosse;
 			
+			rond.Width = 50;
+			rond.Height = 50;
+			rond.Margin = new Thickness(x,y,0,0);
+						
+			this.dessin.Children.Add(rond);			
+		}
+		
+		public void afficherCarre(int x, int y)
+		{
+			Rectangle carre = new Rectangle();
+			SolidColorBrush brosse = new SolidColorBrush();
+			brosse.Color = Color.FromRgb(239,174,23);
+			carre.Fill = brosse;
 			
+			carre.Margin = new Thickness(x,y,0,0);
+			
+			carre.Width = 50;
+			carre.Height = 50;
+			this.dessin.Children.Add(carre);	
+		}
+		
+		public void afficherTriangle(int x, int y)
+		{
 			PointCollection listePoints = new PointCollection();
 			listePoints.Add(new Point(0,0));
 			listePoints.Add(new Point(0,1));
@@ -51,45 +96,11 @@ namespace Pinceau
 			triangle.Height = 50;
 			
 			this.dessin.Children.Add(triangle);
-			
-		}
-		void actionDessinerCarre_Click(object sender, RoutedEventArgs e)
-		{
-			Rectangle carre = new Rectangle();
-			SolidColorBrush brosse = new SolidColorBrush();
-			brosse.Color = Color.FromRgb(239,174,23);
-			carre.Fill = brosse;
-			
-			carre.Margin = new Thickness(300,300,0,0);
-			
-			carre.Width = 50;
-			carre.Height = 50;
-			this.dessin.Children.Add(carre);	
 		}
 		
-		void actionDessinerCercle_Click(object sender, RoutedEventArgs e)
+		public  void nettoyerDessin()
 		{
-			this.controleur.notifierActionDessinerCercle();
-		}
-		void actionNettoyer_Click(object sender, RoutedEventArgs e)
-		{
-			this.dessin.Children.Clear();
-		}
-		//public afficherEspace(Terrain terrain)
-		//public afficherCarte(List<Parcelle> listeParcelle)
-		
-		public void afficherCercle(int x, int y)
-		{
-			Ellipse rond = new Ellipse();
-			SolidColorBrush brosse = new SolidColorBrush();
-			brosse.Color = Color.FromRgb(239,174,23);
-			rond.Fill = brosse;
-			
-			rond.Width = 50;
-			rond.Height = 50;
-			rond.Margin = new Thickness(x,y,0,0);
-						
-			this.dessin.Children.Add(rond);			
+			this.dessin.Children.Clear();			
 		}
 	}
 }
