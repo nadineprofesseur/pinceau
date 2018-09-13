@@ -24,10 +24,12 @@ namespace Pinceau
 	/// </summary>
 	public partial class VuePlancheDessin : Window
 	{
+		
+		private ControleurDessin controleur = null;
 		public VuePlancheDessin()
 		{
 			InitializeComponent();
-			
+			this.controleur = new ControleurDessin(this);
 		}
 		
 		void actionDessinerTriangle_Click(object sender, RoutedEventArgs e)
