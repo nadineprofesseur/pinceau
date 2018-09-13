@@ -1,0 +1,22 @@
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau\Pinceau\obj\Debug\Pinceau.csprojResolveAssemblyReference.cache
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau\Pinceau\obj\Debug\Window1.baml
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau\Pinceau\obj\Debug\Window1.g.cs
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau\Pinceau\obj\Debug\App.g.cs
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau\Pinceau\obj\Debug\Pinceau_MarkupCompile.cache
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau\Pinceau\obj\Debug\Pinceau.g.resources
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau\Pinceau\bin\Debug\Pinceau.exe.config
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau\Pinceau\bin\Debug\Pinceau.exe
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau\Pinceau\bin\Debug\Pinceau.pdb
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau\Pinceau\obj\Debug\Pinceau.exe
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau\Pinceau\obj\Debug\Pinceau.pdb
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau - Copie\Pinceau\bin\Debug\Pinceau.exe.config
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau - Copie\Pinceau\bin\Debug\Pinceau.exe
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau - Copie\Pinceau\bin\Debug\Pinceau.pdb
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau - Copie\Pinceau\obj\Debug\Pinceau.csprojResolveAssemblyReference.cache
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau - Copie\Pinceau\obj\Debug\Window1.baml
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau - Copie\Pinceau\obj\Debug\Window1.g.cs
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau - Copie\Pinceau\obj\Debug\App.g.cs
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau - Copie\Pinceau\obj\Debug\Pinceau_MarkupCompile.cache
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau - Copie\Pinceau\obj\Debug\Pinceau.g.resources
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau - Copie\Pinceau\obj\Debug\Pinceau.exe
+C:\Users\stamandnadine\Documents\SharpDevelop Projects\Pinceau - Copie\Pinceau\obj\Debug\Pinceau.pdb
