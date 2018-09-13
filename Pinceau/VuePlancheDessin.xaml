@@ -57,7 +57,9 @@
 			Grid.Row="0"
 			HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="18,25.8,0,0">
+			Margin="18,25.8,0,0"
+			MouseLeftButtonDown="dessin_MouseLeftButtonDown"
+			Background="{x:Null}">
 			<Ellipse
 				Fill="Gainsboro"
 				Canvas.Left="25"

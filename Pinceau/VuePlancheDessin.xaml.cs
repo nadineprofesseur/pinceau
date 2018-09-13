@@ -30,6 +30,7 @@ namespace Pinceau
 		{
 			InitializeComponent();
 			this.controleur = new ControleurDessin(this);
+			//this.dessin.AddHandler(PointerPressedEvent, new PointerEventHandler());
 		}
 		
 		// Gestionnaires d'événements de la librairie graphique
@@ -51,6 +52,11 @@ namespace Pinceau
 		void actionNettoyer_Click(object sender, RoutedEventArgs e)
 		{
 			this.nettoyerDessin();
+		}
+		// https://stackoverflow.com/questions/4157717/how-can-i-listen-for-left-mouseclicks-on-a-canvas-in-a-c-sharp-wpf
+		void dessin_MouseLeftButtonDown(object sender, RoutedEventArgs e)
+		{
+			this.nettoyerDessin();	
 		}
 		// Fin gestionnaires d'événements
 		

@@ -21,7 +21,6 @@ namespace Pinceau
 		{
 			this.vuePlancheDessin = vue;
 		}
-		
 		public void notifierActionNettoyerDessin()
 		{
 			this.vuePlancheDessin.nettoyerDessin();
@@ -36,6 +35,9 @@ namespace Pinceau
 		public void notifierActionDessinerCarre()
 		{
 			this.vuePlancheDessin.afficherCarre(0,0);
+			this.vuePlancheDessin.afficherCarre(100,100);
+			this.vuePlancheDessin.afficherCarre(150,150);
+			this.vuePlancheDessin.afficherCarre(200,200);
 		}
 		public void notifierActionDessinerTriangle()
 		{
