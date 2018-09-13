@@ -35,15 +35,18 @@ namespace Pinceau
 		// Gestionnaires d'événements de la librairie graphique
 		void actionDessinerTriangle_Click(object sender, RoutedEventArgs e)
 		{
-			afficherTriangle(0,0);
+			this.controleur.notifierActionDessinerTriangle();
+			//afficherTriangle(0,0);
 		}
 		void actionDessinerCarre_Click(object sender, RoutedEventArgs e)
 		{
-			afficherCarre(0,0);
+			this.controleur.notifierActionDessinerCarre();
+			//afficherCarre(0,0);
 		}
 		void actionDessinerCercle_Click(object sender, RoutedEventArgs e)
 		{
 			this.controleur.notifierActionDessinerCercle();
+			//afficherCercle(0,0);
 		}
 		void actionNettoyer_Click(object sender, RoutedEventArgs e)
 		{
