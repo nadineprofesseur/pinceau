@@ -34,6 +34,8 @@ namespace Pinceau
 		
 		void actionDessinerTriangle_Click(object sender, RoutedEventArgs e)
 		{
+			
+			
 			PointCollection listePoints = new PointCollection();
 			listePoints.Add(new Point(0,0));
 			listePoints.Add(new Point(0,1));
@@ -67,18 +69,7 @@ namespace Pinceau
 		
 		void actionDessinerCercle_Click(object sender, RoutedEventArgs e)
 		{
-			Ellipse rond = new Ellipse();
-			SolidColorBrush brosse = new SolidColorBrush();
-			brosse.Color = Color.FromRgb(239,174,23);
-			rond.Fill = brosse;
-			
-			rond.Width = 50;
-			rond.Height = 50;
-						
-			this.dessin.Children.Add(rond);
-			
-			//this.dessin.setTop(rond, 100);
-			//this.dessin.setLeft(rond, 100);
+			this.controleur.notifierActionDessinerCercle();
 		}
 		void actionNettoyer_Click(object sender, RoutedEventArgs e)
 		{
@@ -86,5 +77,19 @@ namespace Pinceau
 		}
 		//public afficherEspace(Terrain terrain)
 		//public afficherCarte(List<Parcelle> listeParcelle)
+		
+		public void afficherCercle(int x, int y)
+		{
+			Ellipse rond = new Ellipse();
+			SolidColorBrush brosse = new SolidColorBrush();
+			brosse.Color = Color.FromRgb(239,174,23);
+			rond.Fill = brosse;
+			
+			rond.Width = 50;
+			rond.Height = 50;
+			rond.Margin = new Thickness(x,y,0,0);
+						
+			this.dessin.Children.Add(rond);			
+		}
 	}
 }

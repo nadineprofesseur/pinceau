@@ -21,5 +21,22 @@ namespace Pinceau
 		{
 			this.vuePlancheDessin = vue;
 		}
+		
+		public void notifierActionDessinerCercle()
+		{
+			this.vuePlancheDessin.afficherCercle(50,50);
+			this.vuePlancheDessin.afficherCercle(100,100);
+			this.vuePlancheDessin.afficherCercle(150,150);
+			this.vuePlancheDessin.afficherCercle(200,200);
+		}
+		public void notifierActionDessinerCarre()
+		{
+			
+		}
+		public void notifierActionDessinerTriangle()
+		{
+			
+		}
+		
 	}
 }
