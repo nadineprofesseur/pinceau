@@ -7,7 +7,7 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
-
+using System.Diagnostics;
 namespace Pinceau
 {
 	/// <summary>
@@ -16,7 +16,7 @@ namespace Pinceau
 	public class ControleurDessin
 	{
 		private VuePlancheDessin vuePlancheDessin = null;
-		enum FORME{CERCLE,CARRE,TRIANGLE};
+		enum FORME{CERCLE,CARRE,TRIANGLE,AUCUNE};
 		private FORME formeActive;
 		
 		public ControleurDessin(VuePlancheDessin vue)
@@ -30,19 +30,46 @@ namespace Pinceau
 		public void notifierActionDessinerCercle()
 		{
 			this.formeActive = FORME.CERCLE;
+			this.vuePlancheDessin.activerBoutonCercle();
 			//this.vuePlancheDessin.illuminerActionCercle();
 		}
 		public void notifierActionDessinerCarre()
 		{
+			this.vuePlancheDessin.activerBoutonCarre();
 			this.formeActive = FORME.CARRE;
 		}
 		public void notifierActionDessinerTriangle()
 		{
+			this.vuePlancheDessin.activerBoutonTriangle();
 			this.formeActive = FORME.TRIANGLE;
 		}
 		public void notifierActionClicDessin(int x, int y)
 		{
-			this.vuePlancheDessin.nettoyerDessin();
+			switch(formeActive)
+			{
+				case FORME.CERCLE:
+					Debug.WriteLine("FORME.CERCLE");
+					this.vuePlancheDessin.afficherCercle(0,0);
+					this.vuePlancheDessin.desactiverBoutonCercle();
+				break;
+				case FORME.CARRE:
+					Debug.WriteLine("FORME.CARRE");
+					this.vuePlancheDessin.afficherCarre(0,0);
+					this.vuePlancheDessin.desactiverBoutonCarre();
+				break;
+				case FORME.TRIANGLE:
+					Debug.WriteLine("FORME.TRIANGLE");
+					this.vuePlancheDessin.afficherTriangle(0,0);
+					this.vuePlancheDessin.desactiverBoutonTriangle();
+				break;
+				default:
+					Debug.WriteLine("DEFAULT");
+				break;
+			}
+			
+			this.formeActive = FORME.AUCUNE;
+			
 		}
+		
 	}
 }

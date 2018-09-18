@@ -26,7 +26,8 @@
 			Grid.Row="0"
 			HorizontalAlignment="Right"
 			VerticalAlignment="Top"
-			Margin="0,131.8,19.4,0" />
+			Margin="0,131.8,19.4,0"
+			Background="#FFE3E3E3" />
 		<Button
 			Width="75"
 			Height="59"

@@ -111,5 +111,45 @@ namespace Pinceau
 		{
 			this.dessin.Children.Clear();			
 		}
+		
+		public void activerBoutonCercle()
+		{			
+			SolidColorBrush brosse = new SolidColorBrush();
+			brosse.Color = Color.FromRgb(252,250,121); // TODO pas de chiffre magique
+			this.actionDessinerCercle.Background = brosse;
+		}
+		public void desactiverBoutonCercle()
+		{
+			SolidColorBrush brosse = new SolidColorBrush();
+			brosse.Color = SystemColors.ControlLightColor;
+			this.actionDessinerCercle.Background = brosse;
+		}
+		
+		public void activerBoutonCarre()
+		{
+			SolidColorBrush brosse = new SolidColorBrush();
+			brosse.Color = Color.FromRgb(252,250,121); // TODO pas de chiffre magique
+			this.actionDessinerCarre.Background = brosse;		
+		}
+		public void desactiverBoutonCarre()
+		{
+			SolidColorBrush brosse = new SolidColorBrush();
+			brosse.Color = SystemColors.ControlLightColor;
+			this.actionDessinerCarre.Background = brosse;
+		}
+		
+		public void activerBoutonTriangle()
+		{
+			SolidColorBrush brosse = new SolidColorBrush();
+			brosse.Color = Color.FromRgb(252,250,121); // TODO pas de chiffre magique
+			this.actionDessinerTriangle.Background = brosse;		
+		}
+		public void desactiverBoutonTriangle()
+		{
+			SolidColorBrush brosse = new SolidColorBrush();
+			brosse.Color = SystemColors.ControlLightColor;
+			this.actionDessinerTriangle.Background = brosse;
+		}
+		
 	}
 }
