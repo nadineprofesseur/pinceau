@@ -16,6 +16,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
+using Pinceau.modele;
 
 namespace Pinceau
 {
@@ -54,43 +55,69 @@ namespace Pinceau
 			this.controleur.notifierActionNettoyerDessin();
 		}
 		// https://stackoverflow.com/questions/4157717/how-can-i-listen-for-left-mouseclicks-on-a-canvas-in-a-c-sharp-wpf
-		void dessin_MouseLeftButtonDown(object sender, RoutedEventArgs e)
+		void dessin_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
 		{
-			this.controleur.notifierActionClicDessin(0,0);
+			System.Windows.Point position = e.GetPosition(null);
+			this.controleur.notifierActionClicDessin((int)position.X,(int)position.Y);
 		}
 		// Fin gestionnaires d'événements
 		
-		public void afficherCercle(int x, int y)
+		// Cas d'exception, dans l'application d'edition avec vue non-rafraichissante on ne stocke pas le modele dans la vue
+		// Generalement, on le fait on stocke le modele complet dans la vue 
+		public void afficherDessin(Dessin dessin)
+		{
+			foreach(Forme forme in dessin.listeFormes) // pas public, on passe par le get
+			{
+				switch(forme.type)
+				{
+					case Forme.TYPE_FORME.CERCLE : 
+						this.afficherCercle((Cercle)forme);
+					break;
+					case Forme.TYPE_FORME.CARRE : 
+						this.afficherCarre((Carre)forme);
+					break;
+					case Forme.TYPE_FORME.TRIANGLE : 
+						this.afficherTriangle((Triangle)forme);
+					break;
+					default: 
+					break;
+				}
+				
+			}
+		}
+		
+		public void afficherCercle(Cercle cercle)
 		{
 			Ellipse rond = new Ellipse();
 			SolidColorBrush brosse = new SolidColorBrush();
 			brosse.Color = Color.FromRgb(239,174,23);
 			rond.Fill = brosse;
 			
-			rond.Width = 50;
+			rond.Width = 50; 
 			rond.Height = 50;
-			rond.Margin = new Thickness(x,y,0,0);
+			rond.Margin = new Thickness(cercle.x,cercle.y,0,0);
 						
 			this.dessin.Children.Add(rond);			
 		}
 		
-		public void afficherCarre(int x, int y)
+		public void afficherCarre(Carre carre)
 		{
-			Rectangle carre = new Rectangle();
+			Rectangle rectangle = new Rectangle();
 			SolidColorBrush brosse = new SolidColorBrush();
 			brosse.Color = Color.FromRgb(239,174,23);
-			carre.Fill = brosse;
+			rectangle.Fill = brosse;
 			
-			carre.Margin = new Thickness(x,y,0,0);
+			rectangle.Margin = new Thickness(carre.x,carre.y,0,0);
 			
-			carre.Width = 50;
-			carre.Height = 50;
-			this.dessin.Children.Add(carre);	
+			rectangle.Width = 50;
+			rectangle.Height = 50;
+			this.dessin.Children.Add(rectangle);	
 		}
 		
-		public void afficherTriangle(int x, int y)
+		public void afficherTriangle(Triangle triangle)
 		{
-			PointCollection listePoints = new PointCollection();
+			// TODO programmer triangle ulterieurement
+			/*PointCollection listePoints = new PointCollection();
 			listePoints.Add(new Point(0,0));
 			listePoints.Add(new Point(0,1));
 			listePoints.Add(new Point(1,1));
@@ -105,6 +132,7 @@ namespace Pinceau
 			triangle.Height = 50;
 			
 			this.dessin.Children.Add(triangle);
+			*/
 		}
 		
 		public  void nettoyerDessin()

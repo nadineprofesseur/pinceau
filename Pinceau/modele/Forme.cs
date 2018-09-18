@@ -15,9 +15,22 @@ namespace Pinceau.modele
 	/// </summary>
 	public class Forme
 	{
+		public enum TYPE_FORME {CERCLE, CARRE, TRIANGLE, AUCUNE}; 
+		// defaut de cette maniere d'identifier le type : classe de base est modifiee par chaque classe deriveee ajoutee - negatif
+		// le probleme resulte du fait que les formes n'ont pas de classe Vues et donc le polymorphisme des formes est impossible dans les vues
+		
 		public int x {get; set;}
 		public int y {get; set;}
 		public Couleur couleur {get;set;}
+		public TYPE_FORME type {get;set;}
+		
+		public Forme(int x, int y, Couleur couleur)
+		{
+			this.x = x;
+			this.y = y;
+			this.couleur = couleur;
+			this.type = TYPE_FORME.AUCUNE;
+		}				
 		
 		// A cause de la contrainte architecturale qui empeche d'utiliser Color dans le modele
 		public class Couleur
@@ -32,25 +45,6 @@ namespace Pinceau.modele
 				this.vert = v;
 				this.bleu = b;
 			}
-		}
-				
-		
-		public Forme()
-		{
 		}		
-		
-		public Forme(int x, int y, Couleur couleur)
-		{
-			this.x = x;
-			this.y = y;
-			this.couleur = couleur;
-		}
-		public Forme(int x, int y, int r, int v, int b)
-		{
-			this.x = x;
-			this.y = y;
-			this.couleur = new Couleur(r,v,b);
-		}
-		
 	}
 }

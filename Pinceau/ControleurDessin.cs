@@ -17,6 +17,8 @@ namespace Pinceau
 	/// </summary>
 	public class ControleurDessin
 	{				
+		
+		protected Dessin dessin = new Dessin();
 		private VuePlancheDessin vuePlancheDessin = null;
 		enum FORME{CERCLE,CARRE,TRIANGLE,AUCUNE};
 		private FORME formeActive;
@@ -35,6 +37,10 @@ namespace Pinceau
 		public void notifierActionNettoyerDessin()
 		{
 			this.vuePlancheDessin.nettoyerDessin();
+			
+			// TEST debut
+			// this.vuePlancheDessin.afficherDessin(this.dessin);
+			// TEST fin
 		}
 		public void notifierActionDessinerCercle()
 		{
@@ -58,17 +64,23 @@ namespace Pinceau
 			{
 				case FORME.CERCLE:
 					Debug.WriteLine("FORME.CERCLE");
-					this.vuePlancheDessin.afficherCercle(0,0);
+					Cercle cercle = new Cercle(x,y, new Forme.Couleur(0,0,0));
+					this.dessin.ajouterForme(cercle);
+					this.vuePlancheDessin.afficherCercle(cercle);
 					this.vuePlancheDessin.desactiverBoutonCercle();
 				break;
 				case FORME.CARRE:
 					Debug.WriteLine("FORME.CARRE");
-					this.vuePlancheDessin.afficherCarre(0,0);
+					Carre carre = new Carre(x,y,new Forme.Couleur(0,0,0));
+					this.dessin.ajouterForme(carre);
+					this.vuePlancheDessin.afficherCarre(carre);
 					this.vuePlancheDessin.desactiverBoutonCarre();
 				break;
 				case FORME.TRIANGLE:
 					Debug.WriteLine("FORME.TRIANGLE");
-					this.vuePlancheDessin.afficherTriangle(0,0);
+					Triangle triangle = new Triangle(x,y,new Forme.Couleur(0,0,0));
+					this.dessin.ajouterForme(triangle);
+					this.vuePlancheDessin.afficherTriangle(triangle);
 					this.vuePlancheDessin.desactiverBoutonTriangle();
 				break;
 				default:

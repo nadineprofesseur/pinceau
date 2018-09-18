@@ -17,6 +17,7 @@ namespace Pinceau.modele
 	{
 		public Carre(int x, int y, Couleur couleur) : base(x, y, couleur)
 		{
+			this.type = TYPE_FORME.CARRE;			
 		}
 	}
 }
