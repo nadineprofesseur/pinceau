@@ -8,13 +8,15 @@
  */
 using System;
 using System.Diagnostics;
+using Pinceau.modele;
+
 namespace Pinceau
 {
 	/// <summary>
 	/// Description of ControleurDessin.
 	/// </summary>
 	public class ControleurDessin
-	{
+	{				
 		private VuePlancheDessin vuePlancheDessin = null;
 		enum FORME{CERCLE,CARRE,TRIANGLE,AUCUNE};
 		private FORME formeActive;
@@ -22,6 +24,13 @@ namespace Pinceau
 		public ControleurDessin(VuePlancheDessin vue)
 		{
 			this.vuePlancheDessin = vue;
+			
+			// TEST debut
+			Dessin dessin = new Dessin();
+			Cercle cercle = new Cercle(100,100, new Forme.Couleur(0,0,0));
+			dessin.ajouterForme(cercle);
+			// TEST fin
+			
 		}
 		public void notifierActionNettoyerDessin()
 		{
