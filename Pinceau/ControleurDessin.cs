@@ -58,6 +58,10 @@ namespace Pinceau
 			this.vuePlancheDessin.activerBoutonTriangle();
 			this.formeActive = FORME.TRIANGLE;
 		}
+		public void notifierActionSauvegarder()
+		{
+			
+		}
 		public void notifierActionClicDessin(int x, int y)
 		{
 			switch(formeActive)
