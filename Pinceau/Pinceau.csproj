@@ -64,11 +64,11 @@
     <ApplicationDefinition Include="App.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="action\ControleurDessin.cs" />
     <Compile Include="App.xaml.cs">
       <SubType>Code</SubType>
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ControleurDessin.cs" />
     <Compile Include="donnee\DessinDAO.cs" />
     <Compile Include="modele\Carre.cs" />
     <Compile Include="modele\Cercle.cs" />
@@ -91,6 +91,7 @@
   <ItemGroup>
     <Folder Include="modele" />
     <Folder Include="donnee" />
+    <Folder Include="action" />
     <Folder Include="vue" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
