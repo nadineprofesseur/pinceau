@@ -61,7 +61,8 @@ namespace Pinceau
 		public void notifierActionSauvegarder()
 		{
 			string xml = this.dessin.exporterXML();
-			Console.WriteLine(xml);
+			Console.WriteLine(xml); // TEST
+			System.IO.File.WriteAllText(@"..\..\sauvegarde\dessin.xml",xml);
 		}
 		public void notifierActionClicDessin(int x, int y)
 		{
