@@ -60,7 +60,8 @@ namespace Pinceau
 		}
 		public void notifierActionSauvegarder()
 		{
-			
+			string xml = this.dessin.exporterXML();
+			Console.WriteLine(xml);
 		}
 		public void notifierActionClicDessin(int x, int y)
 		{

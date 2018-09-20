@@ -16,7 +16,7 @@ namespace Pinceau.modele
 	/// </summary>
 	public class Dessin
 	{
-		public List<Forme> listeFormes {get;set;} // TOOSO pas de set car on ne veut pas remplacer l'objet liste, sa gestion est controllee par Dessin
+		public List<Forme> listeFormes {get;set;} // TODO pas de set car on ne veut pas remplacer l'objet liste, sa gestion est controllee par Dessin
 		
 		public Dessin()
 		{
@@ -29,5 +29,17 @@ namespace Pinceau.modele
 			// https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.add?view=netframework-4.7.2#System_Collections_Generic_List_1_Add__0_
 			this.listeFormes.Add(forme);
 		}
+		public string exporterXML()
+		{
+			string xml = "";
+			
+			foreach(Forme forme in listeFormes)
+			{
+				xml += forme.exporterXML();
+			}
+			
+			// pas de champs dans dessin excepté la liste
+			return "<Dessin>" + xml + "</Dessin>";
+		}		
 	}
 }

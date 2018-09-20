@@ -19,5 +19,10 @@ namespace Pinceau.modele
 		{
 			this.type = TYPE_FORME.CARRE;			
 		}
+		public override string exporterXML()
+		{
+			return "<Forme><type>CARRE</type><x>"+x+"</x><y>"+y+"</y><couleur>"+couleur+"</couleur></Forme>";
+		}
+		
 	}
 }

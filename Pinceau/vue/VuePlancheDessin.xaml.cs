@@ -61,7 +61,7 @@ namespace Pinceau
 		// https://stackoverflow.com/questions/4157717/how-can-i-listen-for-left-mouseclicks-on-a-canvas-in-a-c-sharp-wpf
 		void dessin_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
 		{
-			System..Point position = e.GetPosition(null);
+			Point position = e.GetPosition(null);
 			this.controleur.notifierActionClicDessin((int)position.X,(int)position.Y);
 		}
 		// Fin gestionnaires d'événements

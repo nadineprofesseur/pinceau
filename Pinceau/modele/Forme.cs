@@ -45,6 +45,11 @@ namespace Pinceau.modele
 				this.vert = v;
 				this.bleu = b;
 			}
-		}		
+		}
+		
+		public virtual string exporterXML()
+		{
+			return "<Forme><x>"+x+"</x><y>"+y+"</y><couleur>"+couleur+"</couleur></Forme>";
+		}
 	}
 }

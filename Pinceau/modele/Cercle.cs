@@ -19,5 +19,9 @@ namespace Pinceau.modele
 		{
 			this.type = TYPE_FORME.CERCLE;
 		}
+		public override string exporterXML()
+		{
+			return "<Forme><type>CERCLE</type><x>"+x+"</x><y>"+y+"</y><couleur>"+couleur+"</couleur></Forme>";
+		}
 	}
 }

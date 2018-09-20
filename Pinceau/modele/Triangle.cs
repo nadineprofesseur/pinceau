@@ -19,5 +19,9 @@ namespace Pinceau.modele
 		{
 			this.type = TYPE_FORME.TRIANGLE;
 		}
+		public override string exporterXML()
+		{
+			return "<Forme><type>TRIANGLE</type><x>"+x+"</x><y>"+y+"</y><couleur>"+couleur+"</couleur></Forme>";
+		}
 	}
 }
