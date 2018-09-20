@@ -64,6 +64,10 @@
     <ApplicationDefinition Include="App.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="action\commande\Commande.cs" />
+    <Compile Include="action\commande\CommandeDessinerForme.cs" />
+    <Compile Include="action\commande\CommandeNettoyer.cs" />
+    <Compile Include="action\commande\CommandeSauvegarder.cs" />
     <Compile Include="action\ControleurDessin.cs" />
     <Compile Include="App.xaml.cs">
       <SubType>Code</SubType>
@@ -89,6 +93,7 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="action\commande" />
     <Folder Include="modele" />
     <Folder Include="donnee" />
     <Folder Include="action" />
