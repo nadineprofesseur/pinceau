@@ -10,6 +10,7 @@ using System;
 using System.Diagnostics;
 using Pinceau.modele;
 using Pinceau.donnee;
+using Pinceau.action.commande;
 
 namespace Pinceau
 {
@@ -19,10 +20,13 @@ namespace Pinceau
 	public class ControleurDessin
 	{				
 		
-		protected Dessin dessin = new Dessin();
-		private VuePlancheDessin vuePlancheDessin = null;
 		enum FORME{CERCLE,CARRE,TRIANGLE,AUCUNE};
 		private FORME formeActive;
+		
+		private DessinDAO dessinDAO = new DessinDAO();
+		private Historique historique = new Historique();
+		private Dessin dessin = new Dessin();
+		private VuePlancheDessin vuePlancheDessin = null;
 		
 		public ControleurDessin(VuePlancheDessin vue)
 		{
@@ -38,6 +42,7 @@ namespace Pinceau
 		public void notifierActionNettoyerDessin()
 		{
 			this.vuePlancheDessin.nettoyerDessin();
+			this.historique.memoriserAction(new CommandeNettoyer());		
 			
 			// TEST debut
 			// this.vuePlancheDessin.afficherDessin(this.dessin);
@@ -59,11 +64,11 @@ namespace Pinceau
 			this.vuePlancheDessin.activerBoutonTriangle();
 			this.formeActive = FORME.TRIANGLE;
 		}
-		private DessinDAO dessinDAO = new DessinDAO();
 		public void notifierActionSauvegarder()
 		{
 			string xml = this.dessin.exporterXML();
 			this.dessinDAO.ajouterDessin(xml);
+			this.historique.memoriserAction(new CommandeSauvegarder());		
 		} 
 		public void notifierActionClicDessin(int x, int y)
 		{
@@ -75,6 +80,7 @@ namespace Pinceau
 					this.dessin.ajouterForme(cercle);
 					this.vuePlancheDessin.afficherCercle(cercle);
 					this.vuePlancheDessin.desactiverBoutonCercle();
+					this.historique.memoriserAction(new CommandeDessinerForme());
 				break;
 				case FORME.CARRE:
 					Debug.WriteLine("FORME.CARRE");
@@ -82,6 +88,7 @@ namespace Pinceau
 					this.dessin.ajouterForme(carre);
 					this.vuePlancheDessin.afficherCarre(carre);
 					this.vuePlancheDessin.desactiverBoutonCarre();
+					this.historique.memoriserAction(new CommandeDessinerForme());
 				break;
 				case FORME.TRIANGLE:
 					Debug.WriteLine("FORME.TRIANGLE");
@@ -89,6 +96,7 @@ namespace Pinceau
 					this.dessin.ajouterForme(triangle);
 					this.vuePlancheDessin.afficherTriangle(triangle);
 					this.vuePlancheDessin.desactiverBoutonTriangle();
+					this.historique.memoriserAction(new CommandeDessinerForme());
 				break;
 				default:
 					Debug.WriteLine("DEFAULT");
