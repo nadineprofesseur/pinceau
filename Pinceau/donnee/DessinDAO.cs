@@ -18,5 +18,12 @@ namespace Pinceau.donnee
 		public DessinDAO()
 		{
 		}
+		
+		public void ajouterDessin(string xml)	
+		{
+			Console.WriteLine(xml); // TEST
+			System.IO.File.WriteAllText(@"..\..\sauvegarde\dessin.xml",xml); // TODO gerer les noms de fichiers - les generer
+		}
+		
 	}
 }

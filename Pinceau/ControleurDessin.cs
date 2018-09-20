@@ -9,6 +9,7 @@
 using System;
 using System.Diagnostics;
 using Pinceau.modele;
+using Pinceau.donnee;
 
 namespace Pinceau
 {
@@ -58,11 +59,11 @@ namespace Pinceau
 			this.vuePlancheDessin.activerBoutonTriangle();
 			this.formeActive = FORME.TRIANGLE;
 		}
+		private DessinDAO dessinDAO = new DessinDAO();
 		public void notifierActionSauvegarder()
 		{
 			string xml = this.dessin.exporterXML();
-			Console.WriteLine(xml); // TEST
-			System.IO.File.WriteAllText(@"..\..\sauvegarde\dessin.xml",xml);
+			this.dessinDAO.ajouterDessin(xml);
 		}
 		public void notifierActionClicDessin(int x, int y)
 		{
