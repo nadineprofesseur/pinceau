@@ -7,6 +7,8 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Xml;
+using System.IO;
 using System.Diagnostics;
 using Pinceau.modele;
 using Pinceau.donnee;
@@ -30,6 +32,7 @@ namespace Pinceau
 		
 		public ControleurDessin(VuePlancheDessin vue)
 		{
+			this.dessinerXML("<test>blabla</test>");
 			this.vuePlancheDessin = vue;
 			
 			// TEST debut
@@ -104,6 +107,27 @@ namespace Pinceau
 			}
 			
 			this.formeActive = FORME.AUCUNE;
+			
+		}
+		
+		public void dessinerXML(string dessinXML)
+		{
+			XmlReader lecteur = XmlReader.Create(new StringReader(dessinXML));
+			while(lecteur.Read())
+			{
+				if(lecteur.NodeType == XmlNodeType.Element)
+				{
+					Console.WriteLine("Element " + lecteur.Name);
+				}
+				if(lecteur.NodeType == XmlNodeType.Text)
+				{
+					Console.WriteLine("Text " + lecteur.Value);
+				}
+				if(lecteur.NodeType == XmlNodeType.EndElement)
+				{
+					Console.WriteLine("EndElement " + lecteur.Name);
+				}
+			}
 			
 		}
 		
