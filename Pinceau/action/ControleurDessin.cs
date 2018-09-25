@@ -108,8 +108,12 @@ namespace Pinceau
 				break;
 			}
 			
-			this.formeActive = FORME.AUCUNE;
-			
+			this.formeActive = FORME.AUCUNE;	
+		}
+		
+		public void notifierActionRetournerEnArriere()
+		{
+			Console.WriteLine("notifierActionRetournerEnArriere()");
 		}
 		
 		public void dessinerXML(string dessinXML)

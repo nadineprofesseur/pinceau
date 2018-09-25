@@ -11,11 +11,12 @@
 			x:Name="actionNettoyer"
 			Content="Nettoyer"
 			Click="actionNettoyer_Click"
+			RenderTransformOrigin="0.5106,0.2778"
 			Grid.Column="0"
 			Grid.Row="0"
 			HorizontalAlignment="Stretch"
 			VerticalAlignment="Stretch"
-			Margin="384,23.6,19.4,323.2" />
+			Margin="384,27,19.1999999999999,345.8" />
 		<Button
 			Width="75"
 			Height="60"
@@ -27,7 +28,7 @@
 			Grid.Row="0"
 			HorizontalAlignment="Right"
 			VerticalAlignment="Top"
-			Margin="0,84.9999999999999,19.3999999999999,0" />
+			Margin="0,140.4,19.3999999999999,0" />
 		<Button
 			Width="75"
 			Height="59"
@@ -38,41 +39,41 @@
 			Grid.Row="0"
 			HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="384,157.1,0,0" />
+			Margin="384,212.4,0,0" />
 		<Button
 			Width="75"
-			Height="62"
 			Content="CARRÉ"
 			x:Name="actionDessinerCarre"
 			Click="actionDessinerCarre_Click"
-			Grid.Column="0"
-			Grid.Row="0"
-			HorizontalAlignment="Left"
-			VerticalAlignment="Top"
-			Margin="384,223.8,0,0" />
-		<Button
-			x:Name="actionSauvegarder"
-			Content="Sauvegarder"
-			Width="75"
-			Height="64"
+			Height="62"
 			Grid.Column="0"
 			Grid.Row="0"
 			HorizontalAlignment="Left"
 			VerticalAlignment="Bottom"
-			Margin="384,0,0,36.4"
+			Margin="384,0,0,52.8" />
+		<Button
+			x:Name="actionSauvegarder"
+			Content="Sauvegarder"
 			RenderTransformOrigin="0.5,0.5"
-			Click="actionSauvegarder_Click" />
+			Click="actionSauvegarder_Click"
+			Width="75"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			Height="22.799999999999955"
+			VerticalAlignment="Top"
+			Margin="384,62.4,0,0" />
 		<Canvas
-			Width="350"
-			Height="332.4"
 			x:Name="dessin"
+			MouseLeftButtonDown="dessin_MouseLeftButtonDown"
+			Background="{x:Null}"
+			Width="350"
+			Height="316"
 			Grid.Column="0"
 			Grid.Row="0"
 			HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="18,25.8,0,0"
-			MouseLeftButtonDown="dessin_MouseLeftButtonDown"
-			Background="{x:Null}">
+			Margin="18,26,0,0">
 			<Ellipse
 				Fill="Gainsboro"
 				Canvas.Left="25"
@@ -92,5 +93,50 @@
 				Width="50"
 				Height="50" />
 		</Canvas>
+		<Button
+			Height="23"
+			Width="24.399999999999977"
+			Background="#FFF23030"
+			x:Name="actionDessinerCarreRouge"
+			Content=""
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Margin="17.6,0,0,17.2" />
+		<Button
+			Height="23"
+			Width="24.399999999999977"
+			x:Name="actionDessinerCarreRouge_Copy"
+			Content=""
+			Background="#FFFCED79"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Margin="49.6,0,0,17.2" />
+		<Button
+			x:Name="actionDessinerCarreBleu"
+			Content=""
+			Height="23"
+			Background="#FF34429B"
+			Width="24.399999999999977"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Bottom"
+			Margin="0,0,372.4,17.2" />
+		<Button
+			x:Name="actionRetournerEnArriere"
+			RenderTransformOrigin="0.5,0.5"
+			Width="75"
+			Height="24.200000000000045"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="384,101.6,0,0"
+			Content="Retour"
+			Click="actionRetournerEnArriere_Click" />
 	</Grid>
 </Window>

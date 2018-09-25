@@ -58,6 +58,11 @@ namespace Pinceau
 		{
 			this.controleur.notifierActionSauvegarder();
 		}
+		void actionRetournerEnArriere_Click(object sender, RoutedEventArgs e)
+		{
+			this.controleur.notifierActionRetournerEnArriere();
+		}
+		
 		// https://stackoverflow.com/questions/4157717/how-can-i-listen-for-left-mouseclicks-on-a-canvas-in-a-c-sharp-wpf
 		void dessin_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
 		{
