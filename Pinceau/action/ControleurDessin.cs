@@ -125,9 +125,10 @@ namespace Pinceau
 			{
 				XmlElement elementForme = (XmlElement)noeudForme;								
 				int x = Int32.Parse(elementForme.GetElementsByTagName("x").Item(0).InnerText);
-				Console.WriteLine("x " + x);
+				//Console.WriteLine("x " + x);
 				int y = Int32.Parse(elementForme.GetElementsByTagName("y").Item(0).InnerText);
-				Console.WriteLine("y " + y);
+				//Console.WriteLine("y " + y);
+				
 				// TODO parser couleur
 				//string couleur = elementForme.GetElementsByTagName("couleur").Item(0).InnerText;
 				//Console.WriteLine("couleur " + couleur);
@@ -135,6 +136,7 @@ namespace Pinceau
 				if(type.CompareTo("CERCLE") == 0) // CompareTo retourne 0 quand deux chaines sont identiques
 				{
 					Cercle cercle = new Cercle(x,y, new Forme.Couleur(0,0,0));
+					this.vuePlancheDessin.afficherCercle(cercle);
 				}
 				
 			}
