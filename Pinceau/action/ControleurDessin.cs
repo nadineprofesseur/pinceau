@@ -80,7 +80,7 @@ namespace Pinceau
 					this.dessin.ajouterForme(cercle);
 					this.vuePlancheDessin.afficherCercle(cercle);
 					this.vuePlancheDessin.desactiverBoutonCercle();
-					this.historique.memoriserAction(new CommandeDessinerForme());
+					this.historique.memoriserAction(new CommandeDessinerForme(this.dessin.exporterXML(), cercle));
 				break;
 				case FORME.CARRE:
 					Debug.WriteLine("FORME.CARRE");
@@ -88,7 +88,7 @@ namespace Pinceau
 					this.dessin.ajouterForme(carre);
 					this.vuePlancheDessin.afficherCarre(carre);
 					this.vuePlancheDessin.desactiverBoutonCarre();
-					this.historique.memoriserAction(new CommandeDessinerForme());
+					this.historique.memoriserAction(new CommandeDessinerForme(this.dessin.exporterXML(), carre));
 				break;
 				case FORME.TRIANGLE:
 					Debug.WriteLine("FORME.TRIANGLE");
@@ -96,7 +96,7 @@ namespace Pinceau
 					this.dessin.ajouterForme(triangle);
 					this.vuePlancheDessin.afficherTriangle(triangle);
 					this.vuePlancheDessin.desactiverBoutonTriangle();
-					this.historique.memoriserAction(new CommandeDessinerForme());
+					this.historique.memoriserAction(new CommandeDessinerForme(this.dessin.exporterXML(), triangle));
 				break;
 				default:
 					Debug.WriteLine("DEFAULT");
