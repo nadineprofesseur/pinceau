@@ -22,6 +22,7 @@ namespace Pinceau.action.commande
 		
 		public CommandeDessinerForme(string dessin, Forme forme)
 		{
+			Console.WriteLine("new CommandeDessinerForme - memorise" + dessin);
 			this.dessinAvant = dessin;
 			this.nouvelleForme = forme;
 		}

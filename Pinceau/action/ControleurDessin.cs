@@ -77,26 +77,26 @@ namespace Pinceau
 				case FORME.CERCLE:
 					Debug.WriteLine("FORME.CERCLE");
 					Cercle cercle = new Cercle(x,y, new Forme.Couleur(0,0,0));
+					this.historique.memoriserAction(new CommandeDessinerForme(this.dessin.exporterXML(), cercle));
 					this.dessin.ajouterForme(cercle);
 					this.vuePlancheDessin.afficherCercle(cercle);
 					this.vuePlancheDessin.desactiverBoutonCercle();
-					this.historique.memoriserAction(new CommandeDessinerForme(this.dessin.exporterXML(), cercle));
 				break;
 				case FORME.CARRE:
 					Debug.WriteLine("FORME.CARRE");
 					Carre carre = new Carre(x,y,new Forme.Couleur(0,0,0));
+					this.historique.memoriserAction(new CommandeDessinerForme(this.dessin.exporterXML(), carre));
 					this.dessin.ajouterForme(carre);
 					this.vuePlancheDessin.afficherCarre(carre);
 					this.vuePlancheDessin.desactiverBoutonCarre();
-					this.historique.memoriserAction(new CommandeDessinerForme(this.dessin.exporterXML(), carre));
 				break;
 				case FORME.TRIANGLE:
 					Debug.WriteLine("FORME.TRIANGLE");
 					Triangle triangle = new Triangle(x,y,new Forme.Couleur(0,0,0));
+					this.historique.memoriserAction(new CommandeDessinerForme(this.dessin.exporterXML(), triangle));
 					this.dessin.ajouterForme(triangle);
 					this.vuePlancheDessin.afficherTriangle(triangle);
 					this.vuePlancheDessin.desactiverBoutonTriangle();
-					this.historique.memoriserAction(new CommandeDessinerForme(this.dessin.exporterXML(), triangle));
 				break;
 				default:
 					Debug.WriteLine("DEFAULT");
