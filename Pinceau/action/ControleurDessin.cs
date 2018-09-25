@@ -32,13 +32,15 @@ namespace Pinceau
 		
 		public ControleurDessin(VuePlancheDessin vue)
 		{
-			this.dessinerXML("<test>blabla</test>");
 			this.vuePlancheDessin = vue;
 			
 			// TEST debut
 			Dessin dessin = new Dessin();
 			Cercle cercle = new Cercle(100,100, new Forme.Couleur(0,0,0));
 			dessin.ajouterForme(cercle);
+			
+			this.vuePlancheDessin.nettoyerDessin();
+			this.dessinerXML(dessin.exporterXML());
 			// TEST fin
 			
 		}
@@ -112,23 +114,17 @@ namespace Pinceau
 		
 		public void dessinerXML(string dessinXML)
 		{
-			XmlReader lecteur = XmlReader.Create(new StringReader(dessinXML));
-			while(lecteur.Read())
-			{
-				if(lecteur.NodeType == XmlNodeType.Element)
-				{
-					Console.WriteLine("Element " + lecteur.Name);
-				}
-				if(lecteur.NodeType == XmlNodeType.Text)
-				{
-					Console.WriteLine("Text " + lecteur.Value);
-				}
-				if(lecteur.NodeType == XmlNodeType.EndElement)
-				{
-					Console.WriteLine("EndElement " + lecteur.Name);
-				}
-			}
+			Console.WriteLine("dessinerXML() - " + dessinXML);
+			XmlDocument doc = new XmlDocument();
+			doc.LoadXml(dessinXML);
 			
+			XmlNodeList listeFormes = doc.GetElementsByTagName("Forme");
+			foreach(XmlNode noeudForme in listeFormes)
+			{
+				XmlElement elementForme = (XmlElement)noeudForme;
+				string x = elementForme.GetElementsByTagName("x").Item(0).InnerText;
+				Console.WriteLine("x " + x);
+			}
 		}
 		
 	}
