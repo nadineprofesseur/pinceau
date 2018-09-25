@@ -80,7 +80,7 @@ namespace Pinceau
 				case FORME.CERCLE:
 					Debug.WriteLine("FORME.CERCLE");
 					Cercle cercle = new Cercle(x,y, new Forme.Couleur(0,0,0));
-					this.historique.memoriserAction(new CommandeDessinerForme(this.dessin.exporterXML(), cercle));
+					this.historique.memoriserAction(new CommandeDessinerForme(this.dessin.exporterXML(), cercle, this.vuePlancheDessin));
 					this.dessin.ajouterForme(cercle);
 					this.vuePlancheDessin.afficherCercle(cercle);
 					this.vuePlancheDessin.desactiverBoutonCercle();

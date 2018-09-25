@@ -19,12 +19,15 @@ namespace Pinceau.action.commande
 		
 		protected Forme nouvelleForme = null;
 		protected string dessinAvant = "";
+		protected LecteurXML lecteurXML = new LecteurXML();
+		protected VuePlancheDessin vuePlancheDessin;
 		
-		public CommandeDessinerForme(string dessin, Forme forme)
+		public CommandeDessinerForme(string dessin, Forme forme, VuePlancheDessin vuePlancheDessin)
 		{
 			Console.WriteLine("new CommandeDessinerForme - memorise" + dessin);
 			this.dessinAvant = dessin;
 			this.nouvelleForme = forme;
+			this.vuePlancheDessin = vuePlancheDessin;
 		}
 		public override void executer()
 		{
@@ -32,6 +35,9 @@ namespace Pinceau.action.commande
 		public override void annuler()
 		{
 			Console.WriteLine("CommandeDessinerForme.annuler()");
+			List<Forme> listeFormes = lecteurXML.lireXML();
+			this.vuePlancheDessin.nettoyerDessin();
+			foreach(Forme forme in listeFormes) this.vuePlancheDessin.afficherCercle((Cercle)forme); // TODO gerer autres formes
 		}
 
 	}
