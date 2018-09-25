@@ -27,5 +27,12 @@ namespace Pinceau.action.commande
 			this.dernieresActions.Push(commande);
 		}
 		
+		public Commande abandonnerAction()
+		{
+			if(this.dernieresActions.Count > 0)
+				return this.dernieresActions.Pop();
+			return null;
+		}
+		
 	}
 }

@@ -31,6 +31,7 @@ namespace Pinceau.action.commande
 		}
 		public override void annuler()
 		{
+			Console.WriteLine("CommandeDessinerForme.annuler()");
 		}
 
 	}

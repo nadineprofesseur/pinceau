@@ -47,7 +47,7 @@ namespace Pinceau
 		public void notifierActionNettoyerDessin()
 		{
 			this.vuePlancheDessin.nettoyerDessin();
-			this.historique.memoriserAction(new CommandeNettoyer());		
+			//this.historique.memoriserAction(new CommandeNettoyer());		
 			
 			// TEST debut
 			// this.vuePlancheDessin.afficherDessin(this.dessin);
@@ -73,7 +73,7 @@ namespace Pinceau
 		{
 			string xml = this.dessin.exporterXML();
 			this.dessinDAO.ajouterDessin(xml);
-			this.historique.memoriserAction(new CommandeSauvegarder());		
+			//this.historique.memoriserAction(new CommandeSauvegarder());		
 		} 
 		public void notifierActionClicDessin(int x, int y)
 		{
@@ -114,6 +114,8 @@ namespace Pinceau
 		public void notifierActionRetournerEnArriere()
 		{
 			Console.WriteLine("notifierActionRetournerEnArriere()");
+			Commande commande = this.historique.abandonnerAction();
+			if(null != commande) commande.annuler();
 		}
 		
 		public void dessinerXML(string dessinXML)
