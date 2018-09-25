@@ -35,9 +35,10 @@ namespace Pinceau
 			this.vuePlancheDessin = vue;
 			
 			// TEST debut
-			Dessin dessin = new Dessin();
 			Cercle cercle = new Cercle(100,100, new Forme.Couleur(0,0,0));
 			dessin.ajouterForme(cercle);
+			Cercle cercle2 = new Cercle(200,200, new Forme.Couleur(0,0,0));
+			dessin.ajouterForme(cercle2);
 			
 			this.dessinerXML(dessin.exporterXML());
 			// TEST fin
