@@ -39,7 +39,6 @@ namespace Pinceau
 			Cercle cercle = new Cercle(100,100, new Forme.Couleur(0,0,0));
 			dessin.ajouterForme(cercle);
 			
-			this.vuePlancheDessin.nettoyerDessin();
 			this.dessinerXML(dessin.exporterXML());
 			// TEST fin
 			
@@ -115,15 +114,29 @@ namespace Pinceau
 		public void dessinerXML(string dessinXML)
 		{
 			Console.WriteLine("dessinerXML() - " + dessinXML);
+			
+			this.vuePlancheDessin.nettoyerDessin();
+			
 			XmlDocument doc = new XmlDocument();
 			doc.LoadXml(dessinXML);
 			
 			XmlNodeList listeFormes = doc.GetElementsByTagName("Forme");
 			foreach(XmlNode noeudForme in listeFormes)
 			{
-				XmlElement elementForme = (XmlElement)noeudForme;
-				string x = elementForme.GetElementsByTagName("x").Item(0).InnerText;
+				XmlElement elementForme = (XmlElement)noeudForme;								
+				int x = Int32.Parse(elementForme.GetElementsByTagName("x").Item(0).InnerText);
 				Console.WriteLine("x " + x);
+				int y = Int32.Parse(elementForme.GetElementsByTagName("y").Item(0).InnerText);
+				Console.WriteLine("y " + y);
+				// TODO parser couleur
+				//string couleur = elementForme.GetElementsByTagName("couleur").Item(0).InnerText;
+				//Console.WriteLine("couleur " + couleur);
+				string type = elementForme.GetElementsByTagName("type").Item(0).InnerText;
+				if(type.CompareTo("CERCLE") == 0) // CompareTo retourne 0 quand deux chaines sont identiques
+				{
+					Cercle cercle = new Cercle(x,y, new Forme.Couleur(0,0,0));
+				}
+				
 			}
 		}
 		
