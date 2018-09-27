@@ -37,8 +37,7 @@ namespace Pinceau.action.commande
 		{
 			Console.WriteLine("CommandeDessinerForme.annuler()");
 			List<Forme> listeFormes = lecteurXML.lireXML(this.dessinAvant);
-			this.vuePlancheDessin.nettoyerDessin();
-			foreach(Forme forme in listeFormes) this.vuePlancheDessin.afficherCercle((Cercle)forme); // TODO gerer autres formes
+			this.vuePlancheDessin.afficherListeFormes(listeFormes);
 		}
 
 	}

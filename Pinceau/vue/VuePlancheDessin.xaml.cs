@@ -95,6 +95,13 @@ namespace Pinceau
 			}
 		}
 		
+		public void afficherListeFormes(List<Forme> listeFormes)
+		{
+			this.nettoyerDessin();
+			// TODO redessiner le carre de fond
+			foreach(Forme forme in listeFormes) this.afficherCercle((Cercle)forme); // TODO gerer autres formes		
+		}
+		
 		public void afficherCercle(Cercle cercle)
 		{
 			Ellipse rond = new Ellipse();

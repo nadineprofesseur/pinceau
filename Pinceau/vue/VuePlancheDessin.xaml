@@ -74,7 +74,13 @@
 			HorizontalAlignment="Left"
 			VerticalAlignment="Top"
 			Margin="18,26,0,0">
-			<Ellipse
+			<Rectangle
+				Fill="LightCoral"
+				Canvas.Left="0"
+				Canvas.Top="0"
+				Width="350"
+				Height="316" />
+			<!-- Ellipse
 				Fill="Gainsboro"
 				Canvas.Left="25"
 				Canvas.Top="25"
@@ -91,7 +97,7 @@
 				Canvas.Left="75"
 				Canvas.Top="75"
 				Width="50"
-				Height="50" />
+				Height="50" /-->
 		</Canvas>
 		<Button
 			Height="23"
