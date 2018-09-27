@@ -177,17 +177,17 @@
 			Click="actionDessinerCarreRose_Click" />
 		<Button
 			Height="23"
-			Width="24.399999999999977"
 			Content=""
 			Background="#FFFCFCFC"
 			x:Name="actionDessinerCarreBlanc"
 			Grid.Column="0"
 			Grid.Row="0"
-			HorizontalAlignment="Left"
 			VerticalAlignment="Bottom"
-			Margin="176.6,0,0,17"
 			RenderTransformOrigin="0.5,0.5"
-			Click="actionDessinerCarreBlanc_Click" />
+			Click="actionDessinerCarreBlanc_Click"
+			Width="24.8"
+			HorizontalAlignment="Left"
+			Margin="176.6,0,0,17" />
 		<Button
 			Content=""
 			RenderTransformOrigin="0.5,0.5"

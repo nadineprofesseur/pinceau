@@ -33,6 +33,26 @@ namespace Pinceau.modele
 			this.petitCarreJaune = new Carre(new Couleur(252,237,121), PETIT); // FFFCED79			
 		}
 		
+		public Carre creerGrandCarreBlanc()
+		{
+			this.grandCarreBlanc.cloner();
+		}
+		
+		public Carre creerGrandCarreNoir()
+		{
+			this.grandCarreNoir.cloner();
+		}
+		
+		public Carre creerPetitCarreRouge()
+		{
+			this.petitCarreRouge.cloner();
+		}
+		
+		public Carre creerPetitCarreJaune()
+		{
+			this.petitCarreJaune.cloner();
+		}
+		
 		
 		
 	}

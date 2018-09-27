@@ -28,6 +28,7 @@ namespace Pinceau
 		private Historique historique = new Historique();
 		private Dessin dessin = new Dessin();
 		private VuePlancheDessin vuePlancheDessin = null;
+		private Reserve reserve = new Reserve();
 		
 		public ControleurDessin(VuePlancheDessin vue)
 		{

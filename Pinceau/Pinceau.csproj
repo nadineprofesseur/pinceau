@@ -80,6 +80,7 @@
     <Compile Include="modele\Dessin.cs" />
     <Compile Include="modele\Forme.cs" />
     <Compile Include="modele\LecteurXML.cs" />
+    <Compile Include="modele\Reserve.cs" />
     <Compile Include="modele\Triangle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\WPFAssemblyInfo.cs" />
