@@ -26,31 +26,31 @@ namespace Pinceau.modele
 		
 		public Reserve()
 		{
-			this.grandCarreBlanc = new Carre(new Couleur(255,255,255), GRAND);
-			this.grandCarreNoir = new Carre(new Couleur(0,0,0), GRAND);
+			this.grandCarreBlanc = new Carre(new Forme.Couleur(255,255,255), GRAND);
+			this.grandCarreNoir = new Carre(new Forme.Couleur(0,0,0), GRAND);
 			// https://www.rapidtables.com/convert/number/hex-to-decimal.html
-			this.petitCarreRouge = new Carre(new Couleur(242,48,48), PETIT); // FFF23030
-			this.petitCarreJaune = new Carre(new Couleur(252,237,121), PETIT); // FFFCED79			
+			this.petitCarreRouge = new Carre(new Forme.Couleur(242,48,48), PETIT); // FFF23030
+			this.petitCarreJaune = new Carre(new Forme.Couleur(252,237,121), PETIT); // FFFCED79			
 		}
 		
 		public Carre creerGrandCarreBlanc()
 		{
-			this.grandCarreBlanc.cloner();
+			return this.grandCarreBlanc.cloner();
 		}
 		
 		public Carre creerGrandCarreNoir()
 		{
-			this.grandCarreNoir.cloner();
+			return this.grandCarreNoir.cloner();
 		}
 		
 		public Carre creerPetitCarreRouge()
 		{
-			this.petitCarreRouge.cloner();
+			return this.petitCarreRouge.cloner();
 		}
 		
 		public Carre creerPetitCarreJaune()
 		{
-			this.petitCarreJaune.cloner();
+			return this.petitCarreJaune.cloner();
 		}
 		
 		

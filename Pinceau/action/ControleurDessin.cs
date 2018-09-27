@@ -68,12 +68,29 @@ namespace Pinceau
 			this.vuePlancheDessin.activerBoutonTriangle();
 			this.formeActive = FORME.TRIANGLE;
 		}
+		
+		
+		public void notifierActionDessinerCarreBlanc()
+		{
+		}
+		public void notifierActionDessinerCarreNoir()
+		{
+		}
+		public void notifierActionDessinerPetitCarreRouge()
+		{
+		}
+		public void notifierActionDessinerPetitCarreJaune()
+		{
+		}
+		
+		
 		public void notifierActionSauvegarder()
 		{
 			string xml = this.dessin.exporterXML();
 			this.dessinDAO.ajouterDessin(xml);
 			//this.historique.memoriserAction(new CommandeSauvegarder());		
 		} 
+		
 		public void notifierActionClicDessin(int x, int y)
 		{
 			switch(formeActive)

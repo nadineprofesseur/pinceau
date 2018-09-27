@@ -79,15 +79,19 @@ namespace Pinceau
 		}
 		void actionDessinerCarreBlanc_Click(object sender, RoutedEventArgs e)
 		{
+			this.controleur.notifierActionDessinerCarreBlanc();
 		}
 		void actionDessinerCarreNoir_Click(object sender, RoutedEventArgs e)
 		{
+			this.controleur.notifierActionDessinerCarreNoir();
 		}
 		void actionDessinerPetitCarreRouge_Click(object sender, RoutedEventArgs e)
 		{
+			this.controleur.notifierActionDessinerPetitCarreRouge();			
 		}
 		void actionDessinerPetitCarreJaune_Click(object sender, RoutedEventArgs e)
 		{
+			this.controleur.notifierActionDessinerPetitCarreJaune();			
 		}
 		void actionDessinerPetitCarreVert_Click(object sender, RoutedEventArgs e)
 		{
