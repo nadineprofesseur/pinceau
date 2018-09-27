@@ -30,6 +30,12 @@ namespace Pinceau.modele
 		{
 			return "<Forme><type>CARRE</type><x>"+x+"</x><y>"+y+"</y><couleur>"+couleur+"</couleur></Forme>";
 		}
-		
+		public Carre cloner()
+		{
+			//return new Carre(this.couleur, this.cote); 
+			// pour que le benefice du design pattern soit present il faut avoir un clonage bit a bit
+			return (Carre)this.MemberwiseClone();
+			// https://www.c-sharpcorner.com/article/cloning-objects-in-net-framework/
+		}		
 	}
 }
