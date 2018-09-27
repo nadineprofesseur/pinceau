@@ -15,9 +15,16 @@ namespace Pinceau.modele
 	/// </summary>
 	public class Carre : Forme
 	{
+		public float cote {get;set;}
+		
 		public Carre(int x, int y, Couleur couleur) : base(x, y, couleur)
 		{
 			this.type = TYPE_FORME.CARRE;			
+		}
+		
+		public Carre(Couleur couleur, float cote) : base(0,0, couleur)
+		{
+			this.cote = cote;
 		}
 		public override string exporterXML()
 		{
