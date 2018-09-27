@@ -11,6 +11,7 @@ using System.Diagnostics;
 using Pinceau.modele;
 using Pinceau.donnee;
 using Pinceau.action.commande;
+using System.Collections.Generic;
 
 namespace Pinceau
 {
@@ -119,9 +120,24 @@ namespace Pinceau
 		public void dessinerXML(string dessinXML)
 		{
 			Console.WriteLine("dessinerXML() - " + dessinXML);
-			
-			this.vuePlancheDessin.nettoyerDessin();
-			
+			LecteurXML lecteur = new LecteurXML();
+			List<Forme> listeForme = lecteur.lireXML(dessinXML);
+			foreach(Forme forme in listeForme)
+			{
+				switch(forme.type)
+				{
+					case Forme.TYPE_FORME.CERCLE:
+						this.vuePlancheDessin.afficherCercle((Cercle)forme);
+						break;
+					case Forme.TYPE_FORME.CARRE:
+						// TODO carre
+						break;
+					case Forme.TYPE_FORME.TRIANGLE:
+						// TODO triangle
+						break;
+				}
+			}
+			this.vuePlancheDessin.nettoyerDessin();			
 		}
 		
 	}
