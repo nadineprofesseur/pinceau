@@ -100,38 +100,38 @@
 				Height="50" /-->
 		</Canvas>
 		<Button
-			Height="23"
-			Width="24.399999999999977"
 			Background="#FFF23030"
-			x:Name="actionDessinerCarreRouge"
 			Content=""
-			Grid.Column="0"
-			Grid.Row="0"
 			HorizontalAlignment="Left"
 			VerticalAlignment="Bottom"
-			Margin="17.6,0,0,17.2" />
+			Margin="17.6,0,0,17.2"
+			Height="25"
+			Width="25"
+			Grid.Column="0"
+			Grid.Row="0"
+			x:Name="actionDessinerCarreRouge" />
 		<Button
-			Height="23"
-			Width="24.399999999999977"
-			x:Name="actionDessinerCarreRouge_Copy"
 			Content=""
 			Background="#FFFCED79"
-			Grid.Column="0"
-			Grid.Row="0"
 			HorizontalAlignment="Left"
 			VerticalAlignment="Bottom"
-			Margin="49.6,0,0,17.2" />
+			Margin="49.6,0,0,17.2"
+			Height="25"
+			Width="25"
+			Grid.Column="0"
+			Grid.Row="0"
+			x:Name="actionDessinerCarreJaune" />
 		<Button
-			x:Name="actionDessinerCarreBleu"
 			Content=""
 			Height="23"
 			Background="#FF34429B"
+			VerticalAlignment="Bottom"
 			Width="24.399999999999977"
+			HorizontalAlignment="Left"
+			Margin="81.6000000000001,0,0,17.2"
 			Grid.Column="0"
 			Grid.Row="0"
-			HorizontalAlignment="Right"
-			VerticalAlignment="Bottom"
-			Margin="0,0,372.4,17.2" />
+			x:Name="actionDessinerCarreBleu" />
 		<Button
 			x:Name="actionRetournerEnArriere"
 			RenderTransformOrigin="0.5,0.5"
@@ -144,5 +144,118 @@
 			Margin="384,101.6,0,0"
 			Content="Retour"
 			Click="actionRetournerEnArriere_Click" />
+		<Button
+			Height="23"
+			Content=""
+			Background="#FF49B229"
+			Width="24.399999999999977"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Bottom"
+			Margin="0,0,336.8,17.8"
+			Grid.Column="0"
+			Grid.Row="0"
+			x:Name="actionDessinerCarreVert" />
+		<Button
+			Height="23"
+			Width="24.399999999999977"
+			Content=""
+			RenderTransformOrigin="0.5,0.5"
+			Background="#FFF98EB0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Margin="146.8,0,0,17.8"
+			Grid.Column="0"
+			Grid.Row="0"
+			x:Name="actionDessinerCarreRose" />
+		<Button
+			Height="23"
+			Width="24.399999999999977"
+			Content=""
+			RenderTransformOrigin="0.5,0.5"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Margin="181,0,0,17"
+			Background="#FFFCFCFC"
+			Grid.Column="0"
+			Grid.Row="0"
+			x:Name="actionDessinerCarreBlanc" />
+		<Button
+			Content=""
+			RenderTransformOrigin="0.5,0.5"
+			Background="#FFFCFCFC"
+			Height="15"
+			Width="15"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Bottom"
+			Margin="0,0,113.6,17"
+			Grid.Column="0"
+			Grid.Row="0"
+			x:Name="actionDessinerPetitCarreBlanc" />
+		<Button
+			Content=""
+			RenderTransformOrigin="0.5,0.5"
+			Background="#FFF98EB0"
+			Height="15"
+			VerticalAlignment="Bottom"
+			Width="15"
+			HorizontalAlignment="Right"
+			Margin="0,0,135.4,17"
+			Grid.Column="0"
+			Grid.Row="0"
+			x:Name="actionDessinerPetitCarreRose" />
+		<Button
+			Content=""
+			Background="#FF49B229"
+			Height="15"
+			VerticalAlignment="Bottom"
+			Width="15"
+			HorizontalAlignment="Right"
+			Margin="0,0,158.6,17"
+			Grid.Column="0"
+			Grid.Row="0"
+			x:Name="actionDessinerCarreVert_Copy" />
+		<Button
+			Content=""
+			Background="#FF34429B"
+			Height="15"
+			VerticalAlignment="Bottom"
+			Width="15"
+			HorizontalAlignment="Right"
+			Margin="0,0,181,17"
+			Grid.Column="0"
+			Grid.Row="0"
+			x:Name="actionDessinerPetitCarreBleu" />
+		<Button
+			Content=""
+			Background="#FFFCED79"
+			Height="15"
+			VerticalAlignment="Bottom"
+			Width="15"
+			HorizontalAlignment="Left"
+			Margin="262.4,0,0,17"
+			Grid.Column="0"
+			Grid.Row="0"
+			x:Name="actionDessinerPetitCarreJaune" />
+		<Button
+			Background="#FFF23030"
+			Content=""
+			Height="15"
+			Width="15"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Margin="241.8,0,0,17"
+			Grid.Column="0"
+			Grid.Row="0"
+			x:Name="actionDessinerPetitCarreRouge" />
+		<Button
+			Height="23"
+			Content=""
+			RenderTransformOrigin="0.5,0.5"
+			VerticalAlignment="Bottom"
+			Background="Black"
+			Margin="211.6,0,242.8,17"
+			Grid.Column="0"
+			Grid.Row="0"
+			x:Name="actionDessinerCarreBlanc_Copy1" />
 	</Grid>
 </Window>
