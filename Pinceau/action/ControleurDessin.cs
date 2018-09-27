@@ -88,7 +88,7 @@ namespace Pinceau
 				case FORME.CARRE:
 					Debug.WriteLine("FORME.CARRE");
 					Carre carre = new Carre(x,y,new Forme.Couleur(0,0,0));
-					this.historique.memoriserAction(new CommandeDessinerForme(this.dessin.exporterXML(), carre));
+					this.historique.memoriserAction(new CommandeDessinerForme(this.dessin.exporterXML(), carre, this.vuePlancheDessin));
 					this.dessin.ajouterForme(carre);
 					this.vuePlancheDessin.afficherCarre(carre);
 					this.vuePlancheDessin.desactiverBoutonCarre();
@@ -96,7 +96,7 @@ namespace Pinceau
 				case FORME.TRIANGLE:
 					Debug.WriteLine("FORME.TRIANGLE");
 					Triangle triangle = new Triangle(x,y,new Forme.Couleur(0,0,0));
-					this.historique.memoriserAction(new CommandeDessinerForme(this.dessin.exporterXML(), triangle));
+					this.historique.memoriserAction(new CommandeDessinerForme(this.dessin.exporterXML(), triangle, this.vuePlancheDessin));
 					this.dessin.ajouterForme(triangle);
 					this.vuePlancheDessin.afficherTriangle(triangle);
 					this.vuePlancheDessin.desactiverBoutonTriangle();

@@ -8,6 +8,7 @@
  */
 using System;
 using Pinceau.modele;
+using System.Collections.Generic;
 
 namespace Pinceau.action.commande
 {
@@ -35,7 +36,7 @@ namespace Pinceau.action.commande
 		public override void annuler()
 		{
 			Console.WriteLine("CommandeDessinerForme.annuler()");
-			List<Forme> listeFormes = lecteurXML.lireXML();
+			List<Forme> listeFormes = lecteurXML.lireXML(this.dessinAvant);
 			this.vuePlancheDessin.nettoyerDessin();
 			foreach(Forme forme in listeFormes) this.vuePlancheDessin.afficherCercle((Cercle)forme); // TODO gerer autres formes
 		}
