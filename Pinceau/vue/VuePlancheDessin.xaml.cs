@@ -62,6 +62,45 @@ namespace Pinceau
 		{
 			this.controleur.notifierActionRetournerEnArriere();
 		}
+		void actionDessinerCarreRouge_Click(object sender, RoutedEventArgs e)
+		{
+		}
+		void actionDessinerCarreJaune_Click(object sender, RoutedEventArgs e)
+		{
+		}
+		void actionDessinerCarreBleu_Click(object sender, RoutedEventArgs e)
+		{
+		}
+		void actionDessinerCarreVert_Click(object sender, RoutedEventArgs e)
+		{
+		}
+		void actionDessinerCarreRose_Click(object sender, RoutedEventArgs e)
+		{
+		}
+		void actionDessinerCarreBlanc_Click(object sender, RoutedEventArgs e)
+		{
+		}
+		void actionDessinerCarreNoir_Click(object sender, RoutedEventArgs e)
+		{
+		}
+		void actionDessinerPetitCarreRouge_Click(object sender, RoutedEventArgs e)
+		{
+		}
+		void actionDessinerPetitCarreJaune_Click(object sender, RoutedEventArgs e)
+		{
+		}
+		void actionDessinerPetitCarreVert_Click(object sender, RoutedEventArgs e)
+		{
+		}
+		void actionDessinerPetitCarreBlanc_Click(object sender, RoutedEventArgs e)
+		{
+		}
+		void actionDessinerPetitCarreBleu_Click(object sender, RoutedEventArgs e)
+		{
+		}
+		void actionDessinerPetitCarreRose_Click(object sender, RoutedEventArgs e)
+		{
+		}
 		
 		// https://stackoverflow.com/questions/4157717/how-can-i-listen-for-left-mouseclicks-on-a-canvas-in-a-c-sharp-wpf
 		void dessin_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)

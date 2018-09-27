@@ -109,7 +109,8 @@
 			Width="25"
 			Grid.Column="0"
 			Grid.Row="0"
-			x:Name="actionDessinerCarreRouge" />
+			x:Name="actionDessinerCarreRouge"
+			Click="actionDessinerCarreRouge_Click" />
 		<Button
 			Content=""
 			Background="#FFFCED79"
@@ -120,18 +121,22 @@
 			Width="25"
 			Grid.Column="0"
 			Grid.Row="0"
-			x:Name="actionDessinerCarreJaune" />
+			x:Name="actionDessinerCarreJaune"
+			Click="actionDessinerCarreJaune_Click"
+			RenderTransformOrigin="0.5,0.5" />
 		<Button
 			Content=""
 			Height="23"
 			Background="#FF34429B"
-			VerticalAlignment="Bottom"
 			Width="24.399999999999977"
-			HorizontalAlignment="Left"
-			Margin="81.6000000000001,0,0,17.2"
+			x:Name="actionDessinerCarreBleu"
 			Grid.Column="0"
 			Grid.Row="0"
-			x:Name="actionDessinerCarreBleu" />
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Margin="81.6,0,0,17.2"
+			RenderTransformOrigin="0.5,0.5"
+			Click="actionDessinerCarreBleu_Click" />
 		<Button
 			x:Name="actionRetournerEnArriere"
 			RenderTransformOrigin="0.5,0.5"
@@ -148,37 +153,41 @@
 			Height="23"
 			Content=""
 			Background="#FF49B229"
+			x:Name="actionDessinerCarreVert"
 			Width="24.399999999999977"
-			HorizontalAlignment="Right"
-			VerticalAlignment="Bottom"
-			Margin="0,0,336.8,17.8"
 			Grid.Column="0"
 			Grid.Row="0"
-			x:Name="actionDessinerCarreVert" />
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Margin="113.4,0,0,17.8"
+			RenderTransformOrigin="0.5,0.5"
+			Click="actionDessinerCarreVert_Click" />
 		<Button
 			Height="23"
 			Width="24.399999999999977"
 			Content=""
-			RenderTransformOrigin="0.5,0.5"
 			Background="#FFF98EB0"
-			HorizontalAlignment="Left"
-			VerticalAlignment="Bottom"
-			Margin="146.8,0,0,17.8"
+			x:Name="actionDessinerCarreRose"
 			Grid.Column="0"
 			Grid.Row="0"
-			x:Name="actionDessinerCarreRose" />
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Margin="143,0,0,17.8"
+			RenderTransformOrigin="0.5,0.5"
+			Click="actionDessinerCarreRose_Click" />
 		<Button
 			Height="23"
 			Width="24.399999999999977"
 			Content=""
-			RenderTransformOrigin="0.5,0.5"
-			HorizontalAlignment="Left"
-			VerticalAlignment="Bottom"
-			Margin="181,0,0,17"
 			Background="#FFFCFCFC"
+			x:Name="actionDessinerCarreBlanc"
 			Grid.Column="0"
 			Grid.Row="0"
-			x:Name="actionDessinerCarreBlanc" />
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Margin="176.6,0,0,17"
+			RenderTransformOrigin="0.5,0.5"
+			Click="actionDessinerCarreBlanc_Click" />
 		<Button
 			Content=""
 			RenderTransformOrigin="0.5,0.5"
@@ -190,19 +199,21 @@
 			Margin="0,0,113.6,17"
 			Grid.Column="0"
 			Grid.Row="0"
-			x:Name="actionDessinerPetitCarreBlanc" />
+			x:Name="actionDessinerPetitCarreBlanc"
+			Click="actionDessinerPetitCarreBlanc_Click" />
 		<Button
 			Content=""
-			RenderTransformOrigin="0.5,0.5"
 			Background="#FFF98EB0"
 			Height="15"
 			VerticalAlignment="Bottom"
+			Grid.Column="0"
+			Grid.Row="0"
+			x:Name="actionDessinerPetitCarreRose"
+			RenderTransformOrigin="0.5,0.5"
 			Width="15"
 			HorizontalAlignment="Right"
 			Margin="0,0,135.4,17"
-			Grid.Column="0"
-			Grid.Row="0"
-			x:Name="actionDessinerPetitCarreRose" />
+			Click="actionDessinerPetitCarreRose_Click" />
 		<Button
 			Content=""
 			Background="#FF49B229"
@@ -213,18 +224,21 @@
 			Margin="0,0,158.6,17"
 			Grid.Column="0"
 			Grid.Row="0"
-			x:Name="actionDessinerCarreVert_Copy" />
+			x:Name="actionDessinerPetitCarreVert"
+			Click="actionDessinerPetitCarreVert_Click" />
 		<Button
 			Content=""
 			Background="#FF34429B"
 			Height="15"
 			VerticalAlignment="Bottom"
-			Width="15"
-			HorizontalAlignment="Right"
-			Margin="0,0,181,17"
 			Grid.Column="0"
 			Grid.Row="0"
-			x:Name="actionDessinerPetitCarreBleu" />
+			x:Name="actionDessinerPetitCarreBleu"
+			Width="15"
+			HorizontalAlignment="Left"
+			Margin="282.4,0,0,17"
+			RenderTransformOrigin="0.5,0.5"
+			Click="actionDessinerPetitCarreBleu_Click" />
 		<Button
 			Content=""
 			Background="#FFFCED79"
@@ -235,27 +249,33 @@
 			Margin="262.4,0,0,17"
 			Grid.Column="0"
 			Grid.Row="0"
-			x:Name="actionDessinerPetitCarreJaune" />
+			x:Name="actionDessinerPetitCarreJaune"
+			RenderTransformOrigin="0.5,0.5"
+			Click="actionDessinerPetitCarreJaune_Click" />
 		<Button
 			Background="#FFF23030"
 			Content=""
 			Height="15"
-			Width="15"
-			HorizontalAlignment="Left"
 			VerticalAlignment="Bottom"
-			Margin="241.8,0,0,17"
 			Grid.Column="0"
 			Grid.Row="0"
-			x:Name="actionDessinerPetitCarreRouge" />
+			x:Name="actionDessinerPetitCarreRouge"
+			Click="actionDessinerPetitCarreRouge_Click"
+			Width="14.4"
+			HorizontalAlignment="Left"
+			Margin="241.8,0,0,17" />
 		<Button
 			Height="23"
 			Content=""
-			RenderTransformOrigin="0.5,0.5"
-			VerticalAlignment="Bottom"
 			Background="Black"
-			Margin="211.6,0,242.8,17"
+			x:Name="actionDessinerCarreNoir"
 			Grid.Column="0"
 			Grid.Row="0"
-			x:Name="actionDessinerCarreBlanc_Copy1" />
+			VerticalAlignment="Bottom"
+			RenderTransformOrigin="0.5,0.5"
+			Click="actionDessinerCarreNoir_Click"
+			Width="24"
+			HorizontalAlignment="Left"
+			Margin="207,0,0,17" />
 	</Grid>
 </Window>
