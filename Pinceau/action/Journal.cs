@@ -15,13 +15,14 @@ namespace Pinceau
 	/// </summary>
 	public class Journal
 	{
+		protected bool actif;
+		
 		public Journal()
 		{
-			
+			this.actif = true;
 		}
-		bool actif;
 		
-		public void enregistrer(string message)
+		public void ecrire(string message)
 		{
 			if(this.actif) Console.WriteLine(message);
 		}

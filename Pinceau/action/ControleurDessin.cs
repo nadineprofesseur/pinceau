@@ -137,7 +137,9 @@ namespace Pinceau
 		
 		public void dessinerXML(string dessinXML)
 		{
-			Console.WriteLine("ControleurDessin.dessinerXML("+dessinXML+")");
+			Journal journal = new Journal();
+			journal.ecrire("ControleurDessin.dessinerXML("+dessinXML+")");
+			//Console.WriteLine("ControleurDessin.dessinerXML("+dessinXML+")");
 			LecteurXML lecteur = new LecteurXML();
 			List<Forme> listeForme = lecteur.lireXML(dessinXML);
 			foreach(Forme forme in listeForme)
