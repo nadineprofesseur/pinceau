@@ -56,6 +56,7 @@ namespace Pinceau
 		}
 		void actionSauvegarder_Click(object sender, RoutedEventArgs e)
 		{
+			Console.WriteLine("VuePlancheDessin.actionSauvegarder_Click()");
 			this.controleur.notifierActionSauvegarder();
 		}
 		void actionRetournerEnArriere_Click(object sender, RoutedEventArgs e)

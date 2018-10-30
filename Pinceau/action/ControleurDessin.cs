@@ -86,6 +86,7 @@ namespace Pinceau
 		
 		public void notifierActionSauvegarder()
 		{
+			Console.WriteLine("ControleurDessin.notifierActionSauvegarder()");
 			string xml = this.dessin.exporterXML();
 			this.dessinDAO.ajouterDessin(xml);
 			//this.historique.memoriserAction(new CommandeSauvegarder());		
@@ -136,7 +137,7 @@ namespace Pinceau
 		
 		public void dessinerXML(string dessinXML)
 		{
-			Console.WriteLine("dessinerXML() - " + dessinXML);
+			Console.WriteLine("ControleurDessin.dessinerXML("+dessinXML+")");
 			LecteurXML lecteur = new LecteurXML();
 			List<Forme> listeForme = lecteur.lireXML(dessinXML);
 			foreach(Forme forme in listeForme)

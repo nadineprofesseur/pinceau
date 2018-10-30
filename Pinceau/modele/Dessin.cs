@@ -21,6 +21,8 @@ namespace Pinceau.modele
 		public Dessin()
 		{
 			this.listeFormes = new List<Forme>(); // Ne pas oublier d'instancier la collection avant de l'utiliser !!!
+			
+			
 		}
 		
 		public void ajouterForme(Forme forme)
@@ -31,6 +33,7 @@ namespace Pinceau.modele
 		}
 		public string exporterXML()
 		{
+			Console.WriteLine("Dessin.exporterXML()");
 			string xml = "";
 			
 			foreach(Forme forme in listeFormes)
@@ -38,8 +41,10 @@ namespace Pinceau.modele
 				xml += forme.exporterXML();
 			}
 			
+			xml = "<Dessin>" + xml + "</Dessin>";
+			Console.WriteLine(xml);
 			// pas de champs dans dessin excepté la liste
-			return "<Dessin>" + xml + "</Dessin>";
+			return xml;
 		}		
 	}
 }
